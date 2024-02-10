@@ -1,0 +1,102 @@
+ {% extends 'index.html' %}
+{% block 'body' %}
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: DarkSalmon ;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+             background-image: url("https://wallpapercave.com/wp/wp9764014.jpg") ;
+    background-repeat: no-repeat;
+    background-size:100%;
+        }
+
+        .container {
+            width: 300px;
+            background: SlateGray  ;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px 0px #ccc;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background: #333;
+            color: #fff;
+            border: 0;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: #555;
+        }
+
+        .options {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .options a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+
+ <form method="post" action="{% url 'checkadminlogin' %}" align="center">
+
+     {% csrf_token %}
+     <label for="username">Username:</label>
+            <input type="text" id="username" name="uname" placeholder="Enter your username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="pwd" placeholder="Enter your password" required>
+
+ <center>           <input type="submit" value="Login">
+        </center></form>
+
+        <div class="options">
+            <a href="signup.php">Sign Up</a>
+            <a href="forgot_password.php">Forgot Password?</a>
+        </div>
+    </div>
+</body>
+</html>
+ {% endblock %}

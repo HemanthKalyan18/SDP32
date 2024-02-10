@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SDP_32</title>
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Header Section */
+.logo a {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0074D9;
+}
+
+.header {
+    background-color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Section */
+.navbar {
+    background-color: #0074D9;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ee6ef5;
+}
+
+/* Main Content Section */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0074D9;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+#########
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.live-changes {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.live-changes .nse, .live-changes .bse {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.green-text {
+    color: green;
+}
+.red-text{
+    color: red;
+
+}
+
+#####
+.company-shares {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.company {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+h3 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.share-data {
+    font-size: 1em;
+}
+
+.share-data p {
+    margin: 5px 0;
+}
+
+.share-data p:first-child {
+    color: #007BFF; /* Blue color for stock price */
+}
+
++
+
+.share-data p:nth-child(2)::after {
+    content: " today";
+}
+
+.share-data p:nth-child(2)::after {
+    content: " today";
+}
+
+ .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0074D9;
+            margin-right: 10px;
+        }
+
+.header-text{
+    font-size: 2rem;
+    margin-left: 10px;
+    color: #333;
+    flex: 1;
+}
+    </style>
+</head>
+
+<body bgcolor="white">
+{% block 'body' %}
+<br>
+<div class="header">
+    <span class="header-text">Stock Exchange Management System</span>
+</div>
+
+    <div class="navbar">
+
+<a href="{% url 'home' %}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="{% url 'about' %}">About</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="{% url 'login' %}">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="{% url 'contact' %}">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    </div>
+
+    <div class="container">
+        <h2>Welcome to Stock Exchange Management System</h2>
+
+        <div class="live-changes">
+            <div class="nse">
+                <h3>NSE Live Changes</h3>
+                <p>19,230.60 <br><span class="green-text">+97.35 (0.51%) ↑ today</span></p>
+            </div>
+&nbsp;&nbsp;&nbsp;
+            <div class="bse">
+                <h3>BSE Live Changes</h3>
+                <p>64,363.78 <br><span class="green-text">+282.88 (0.44%) ↑ today</span></p>
+            </div>
+        </div>
+
+        <div class="company-shares">
+            <h2>Trending Shares Data</h2>
+    <section class="company">
+        <h3>APPLE INC</h3>
+        <div class="share-data">
+            <p>Stock Price: $100.25</p>
+            <p>
+        <span class="green-text">▲ Change: +2.35 (2.5%)</span></p>
+        </div>
+     </section>
+    <section class="company">
+        <h3>Amazon.com Inc</h3>
+        <div class="share-data">
+            <p>Stock Price: $75.60</p>
+            <p><span class="red-text">▼ Change: -1.20 (-1.6%)</span></p>
+        </div>
+    </section>
+
+            <section class="company">
+        <h3>Samsung Electronics Co Ltd Preference Shares Non Voting</h3>
+        <div class="share-data">
+            <p>Stock Price: $120.75</p>
+            <p>
+<span class="green-text">▲ Change: +3.50 (3.0%)</span></p>
+        </div>
+    </section>
+    <section class="company">
+        <h3>SK Hynix Inc</h3>
+        <div class="share-data">
+            <p>Stock Price: $50.90</p>
+            <p><span class="red-text">▼ Change: -0.75 (-1.5%)</span></p>
+        </div>
+    </section>
+
+        </div>
+    </div>
+
+
+<br><br>
+
+{% endblock %}
+
+</body>
+</html>

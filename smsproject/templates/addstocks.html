@@ -1,0 +1,86 @@
+{% extends 'adminhome.html' %}
+
+{% block 'body' %}
+
+ <h3 align="center"><u>Add Stock</u></h3>
+<br>
+
+ <form  method="post" action="{% url 'insertstock' %}">
+     {% csrf_token %}
+  <table align="center" width="40%" height="50%">
+     <tr align="center">
+       <td>
+          <label>Ticker Symbol</label>
+       </td>
+      <td>
+              <input type="text" name="ticker_symbol" required>
+      </td>
+     </tr>
+
+    <tr align="center">
+       <td>
+          <label>Company Name</label>
+       </td>
+      <td>
+              <input type="text" name="company_name" required>
+
+      </td>
+     </tr>
+
+   <tr align="center">
+       <td>
+          <label>Market Cap</label>
+       </td>
+      <td>
+          <input type="number" name="market_capitalization">
+      </td>
+     </tr>
+
+    <tr align="center">
+       <td>
+          <label>Dividend Yield</label>
+       </td>
+      <td>
+                 <input type="number" name="dividend_yield">
+
+      </td>
+     </tr>
+
+    <tr align="center">
+       <td>
+          <label>Beta</label>
+       </td>
+      <td>
+                 <input type="number" name="beta">
+      </td>
+     </tr>
+
+ <tr align="center">
+       <td>
+          <label>Week52-High</label>
+       </td>
+      <td>
+                 <input type="number" name="week_52_high">
+      </td>
+     </tr>
+
+ <tr align="center">
+       <td>
+          <label>Week52-Low</label>
+       </td>
+      <td>
+                 <input type="number" name="week_52_low">
+      </td>
+     </tr>
+
+   <TR align="center">
+    <td><input type="submit" value="Add" class="button"></td>
+    <td><input type="reset" value="Clear" class="button"></td>
+   </TR>
+
+
+  </table>
+
+ </form>
+
+{% endblock %}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SDP_32</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+             background-image: url("https://images.pexels.com/photos/5716025/pexels-photo-5716025.jpeg") ;
+    background-repeat: no-repeat;
+    background-size:100%;
+        }
+
+        .navbar {
+            background-color: #0074D9;
+            overflow: hidden;
+            
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+                  border-radius:10%;
+        }
+        h1 {
+            color: #fff;
+        }
+        h2 {
+            color: #000;
+        }
+        .content {
+            background-color: #fff;
+            padding: 20px;
+        }
+        ######
+           .container {
+      width: 100%;
+      padding: 16px;
+      box-sizing: border-box;
+      border-radius:10%;
+    }
+    .stock {
+      position: relative;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      padding: 5px;
+      background-color: Ivory;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); /* Adjust the values for your desired shadow effect */
+
+    }
+
+    .stock:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('your-background-image.jpg') no-repeat center center;
+      background-size: cover;
+      opacity: 0.2; /* Adjust the opacity as needed */
+      z-index: -1;
+    }
+
+    .stock table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .stock th, .stock td {
+      padding: 5px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+.stock:hover {
+    transform: translateY(-5px);
+}
+.green-text {
+    color: green;
+}
+.red-text{
+    color: red;
+
+}
+
+    </style>
+</head>
+<body bgcolor="violet">
+
+<center>
+<h1>Stock Exchange Management System</h1>
+</center>
+&nbsp;&nbsp
+<div class="navbar">
+
+<a href="{% url 'adminhome' %}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="{% url 'adminuser' %}">User</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="{% url 'adminstock' %}">Market</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="{% url 'adminlogout' %}">Logout</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+<br><br>
+
+{% block 'body' %}
+<br><br>
+<center>
+  <h2>Most Bought on ProFx </h2>
+</center>
+<div class="container">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <a href="{% url 'vi' %}" >
+  <div class="stock">
+    <h3>Vodafone Idea</h3>
+    <table>
+      <tr>
+        <th>Shares</th>
+        <th>P/L</th>
+          <th>Price</th>
+      </tr>
+      <tr>
+        <td>13.75</td>
+        <td><span class="green-text">+1.08 (0.14%)</span></td>
+           <td>₹122.45</td>
+      </tr>
+
+    </table>
+  </div>
+&nbsp;&nbsp;</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="{% url 'eirfc' %}" >
+
+  <div class="stock">
+    <h3>EIRFC</h3>
+    <table>
+      <tr>
+        <th>Shares</th>
+        <th>P/L</th>
+        <th>Price</th>
+
+      </tr>
+      <tr>
+        <td>72.15</td>
+        <td><span class="red-text">-0.90 (1.23%)</span></td>
+          <td>₹128.75</td>
+      </tr>
+    </table>
+  </div>
+&nbsp;&nbsp;</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href="{% url 'zomato' %}" >
+  <div class="stock">
+    <h3>Zomato</h3>
+    <table>
+      <tr>
+        <th>Shares</th>
+        <th>P/L</th>
+        <th>Price</th>
+
+      </tr>
+      <tr>
+        <td>116.50</td>
+        <td><span class="green-text">+8.95 (8.32%)</span></td>
+          <td>₹86.32</td>
+      </tr>
+    </table>
+  </div>
+&nbsp;&nbsp;&nbsp;&nbsp;</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="{% url 'tatasteel' %}" >
+  <div class="stock">
+    <h3>Tata Steel</h3>
+    <table>
+      <tr>
+        <th>Shares</th>
+        <th>P/L</th>
+          <th>Price</th>
+
+      </tr>
+      <tr>
+        <td>117.30</td>
+        <td><span class="red-text">-0.80 (0.68%)</span></td>
+          <td>₹106.12</td>
+      </tr>
+    </table>
+  </div>
+</div>
+&nbsp;&nbsp;</a>
+
+
+{% endblock %}
+
+
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+{% extends 'adminhome.html' %}
+
+{% block 'body' %}
+
+ <h3 align="center"><u>Add User</u></h3>
+<br>
+
+ <form  method="post" action="{% url 'insertuser' %}">
+     {% csrf_token %}
+  <table align="center" width="40%" height="50%">
+     <tr align="center">
+       <td>
+          <label>Username</label>
+       </td>
+      <td>
+              <input type="text" name="username" required>
+      </td>
+     </tr>
+
+    <tr align="center">
+       <td>
+          <label>Email</label>
+       </td>
+      <td>
+              <input type="email" name="email" required>
+
+      </td>
+     </tr>
+
+   <tr align="center">
+       <td>
+          <label>Password</label>
+       </td>
+      <td>
+          <input type="password" name="password">
+      </td>
+     </tr>
+
+    <tr align="center">
+       <td>
+          <label>Date Of Birth</label>
+       </td>
+      <td>
+                 <input type="date" name="date_of_birth">
+      </td>
+     </tr>
+
+    <tr align="center">
+       <td>
+          <label>Mobile Number</label>
+       </td>
+      <td>
+                 <input type="number" name="mobile_number">
+      </td>
+     </tr>
+
+   <TR align="center">
+    <td><input type="submit" value="Add" class="button"></td>
+    <td><input type="reset" value="Clear" class="button"></td>
+   </TR>
+
+
+  </table>
+
+ </form>
+
+{% endblock %}

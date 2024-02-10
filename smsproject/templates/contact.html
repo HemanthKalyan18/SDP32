@@ -1,0 +1,82 @@
+{% extends 'index.html' %}
+
+{% block 'body' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0074D9;
+            padding: 20px 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <br>
+        <h1 align="center">Contact Us</h1>
+    <br>
+    <header>
+        <nav>&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;<a href="{% url 'home' %}">Home</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Company Information</h2>
+        <p>
+            ProFx<br>
+            Address: Netaji Subhash Marg, Chandni Chowk,<br> New Delhi, Delhi 110006<br>
+            Phone: +91 9347301082<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   +91 8790301186<br>
+            Email: custumerCare@profx.com
+        </p>
+
+        <p>
+          <br>
+            Dear Customer,<br><br>
+
+            We sincerely thankful for choosing our platform.
+          Your satisfaction is our top priority, and we're committed to resolving any concerns you may have and provide any information.<br><br>
+
+            If you have any questions or need further assistance, please don't hesitate to contact us using the above provided contact information.<br><br>
+
+            Thank you for choosing Your ProFx.<br><br>
+
+            Sincerely,<br>
+            <br>
+            Team ProFx.
+
+        </p>
+    </div>
+</body>
+</html>
+{% endblock %}

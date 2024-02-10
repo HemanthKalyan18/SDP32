@@ -1,0 +1,71 @@
+{% extends 'adminhome.html' %}
+
+{% block 'body' %}
+    <center>
+        <h2>Manage Users</h2>
+    </center>
+    <br>
+<center>
+    <div class="user-actions">
+        <button class="action-button add-button">
+            <a href="{% url 'addstocks' %}">Add Stock</a>
+        </button>
+
+        <button class="action-button view-button">
+            <a href="{% url 'viewstocks' %}">View All Stocks</a>
+        </button>
+
+        <button class="action-button delete-button">
+            <a href="{% url 'deletestock' %}">Delete Stock</a>
+        </button>
+    </div>
+</center>
+<style>
+.user-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.action-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+
+.add-button {
+  background-color: #00C853;
+}
+
+.add-button:hover {
+  background-color: #d84315;
+}
+
+.view-button {
+  background-color: #00C853;
+}
+
+.view-button:hover {
+  background-color: #d84315;
+}
+
+.delete-button {
+  background-color: #00C853;
+}
+
+.delete-button:hover {
+  background-color: #d84315;
+}
+
+</style>
+{% endblock %}

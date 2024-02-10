@@ -1,0 +1,70 @@
+{% extends 'adminhome.html' %}
+
+{% block 'body' %}
+  <style>
+    .container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  color:black;
+background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.2); /* Black w/opacity/see-through */
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+  color:black;
+}
+
+.chart-container {
+  width: 100%;
+  height: 400px;
+    color:black;
+}
+
+.stock-info {
+  margin-top: 20px;
+}
+
+.stock-info p {
+  margin-bottom: 10px;
+}
+
+  </style>
+  <div class="container">
+    <h1 class="heading">Enfield Ignatians RFC Stock Chart</h1>
+    <div class="chart-container">
+      <canvas id="chart"></canvas>
+    </div>
+    <div class="stock-info">
+      <br><br><br><br><br><br>
+      <p>Symbol: EIRFC</p>
+      <p>Price: ₹128.5</p>
+      <p>Change: -0.90 (1.23%)</p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+
+  <script>
+    const ctx = document.getElementById('chart').getContext('2d');
+
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['110:00', '115:00', '120:00', '125:00', '130:00', '135:00', '140:00'],
+        datasets: [{
+          label: 'VI',
+          data: [138.75, 127.78, 123.80, 131.77, 134.76, 129.75, 128.74]
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'EIRFC'
+        }
+      }
+    });
+  </script>
+{% endblock %}
